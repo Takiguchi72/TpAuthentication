@@ -1,6 +1,4 @@
-package com.example.tpauthentification;
-
-import com.example.tpauthentification.listener.RetourOnClickListener;
+package com.example.tpauthentification.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,6 +10,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.tpauthentification.R;
+import com.example.tpauthentification.listener.RetourOnClickListener;
 
 public class AccueilActivity extends Activity {
 

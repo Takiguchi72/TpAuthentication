@@ -1,4 +1,4 @@
-package com.example.tpauthentification;
+package com.example.tpauthentification.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.view.MenuItem;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
+
+import com.example.tpauthentification.R;
 
 public class WebViewActivity extends Activity {
 

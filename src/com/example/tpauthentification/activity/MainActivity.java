@@ -1,4 +1,4 @@
-package com.example.tpauthentification;
+package com.example.tpauthentification.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.tpauthentification.R;
 import com.example.tpauthentification.listener.RetourOnClickListener;
 
 public class MainActivity extends Activity {

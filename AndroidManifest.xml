@@ -9,14 +9,13 @@
 
 	<application android:allowBackup="true" android:icon="@drawable/ic_launcher"
 		android:label="@string/app_name" android:theme="@style/AppTheme">
-		<activity android:name=".MainActivity" android:label="@string/app_name">
+		<activity android:name="com.example.tpauthentification.activity.MainActivity" android:label="@string/app_name">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
-		</activity>
-		<activity android:name=".AccueilActivity" android:label="@string/title_activity_accueil">
+	com.example.tpauthentification.activity.AccueilActivityactivity android:name=".AccueilActivity" android:lacom.example.tpauthentification.activity.WebViewActivityle_activity_accueil">
 		</activity>
 		<activity android:name=".WebViewActivity" android:label="@string/title_activity_web_view">
 		</activity>
