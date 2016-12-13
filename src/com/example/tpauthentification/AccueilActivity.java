@@ -1,5 +1,7 @@
 package com.example.tpauthentification;
 
+import com.example.tpauthentification.listener.RetourOnClickListener;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -53,12 +55,7 @@ public class AccueilActivity extends Activity {
 			}
 		});
 		
-		((Button) findViewById(R.id.btnRetour)).setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				finish();
-			}
-		});
+		((Button) findViewById(R.id.btnRetour)).setOnClickListener(new RetourOnClickListener(this));
 		
 		((Button) findViewById(R.id.btnAngersMag)).setOnClickListener(new OnClickListener() {
 			@Override
