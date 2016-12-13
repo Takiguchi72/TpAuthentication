@@ -35,10 +35,18 @@ public class AccueilActivity extends Activity {
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
+		
+		switch(item.getItemId()) {
+		case R.id.menu_youtube:
+			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube://")));
 			return true;
+		case R.id.menu_quitter:
+			finish();
+			return true;
+		default:
+			break;
 		}
+		
 		return super.onOptionsItemSelected(item);
 	}
 	
@@ -60,8 +68,8 @@ public class AccueilActivity extends Activity {
 		((Button) findViewById(R.id.btnAngersMag)).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(Intent.ACTION_VIEW);
-				intent.setData(Uri.parse("http://www.angersmag.info/"));
+				Intent intent = new Intent(getApplicationContext(), WebViewActivity.class);
+				intent.putExtra("url", "http://www.angersmag.info/");
 				startActivity(intent);
 			}
 		});
@@ -69,8 +77,14 @@ public class AccueilActivity extends Activity {
 		((Button) findViewById(R.id.btnImie)).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(Intent.ACTION_VIEW);
-				intent.setData(Uri.parse("http://www.imie.fr/"));
+				// Ouverture du site de l'imie dans le navigateur par défaut
+//				Intent intent = new Intent(Intent.ACTION_VIEW);
+//				intent.setData(Uri.parse("http://www.imie.fr/"));
+//				startActivity(intent);
+				
+				// Ouverture du site de l'imie dans une webView
+				Intent intent = new Intent(getApplicationContext(), WebViewActivity.class);
+				intent.putExtra("url", "http://www.imie.fr/");
 				startActivity(intent);
 			}
 		});

@@ -3,9 +3,13 @@
     tools:context="com.example.tpauthentification.AccueilActivity" >
 
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_settings"/>
+        android:id="@+id/menu_youtube"
+        android:icon="@drawable/youtube"
+        android:title="@string/youtube"/>
+
+    <item
+        android:id="@+id/menu_quitter"
+        android:icon="@drawable/quit"
+        android:title="@string/quitter"/>
 
 </menu>

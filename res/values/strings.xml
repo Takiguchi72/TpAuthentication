@@ -15,5 +15,7 @@
     <string name="youtube">YouTube</string>
     <string name="votreMotDePasseEst">Votre mot de passe est : </string>
     <string name="bienvenue">Bienvenue</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="quitter">Quitter</string>
 
 </resources>

@@ -1,9 +1,5 @@
 package com.example.tpauthentification;
 
-import javax.xml.datatype.Duration;
-
-import com.example.tpauthentification.listener.RetourOnClickListener;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +10,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.tpauthentification.listener.RetourOnClickListener;
 
 public class MainActivity extends Activity {
 
@@ -42,13 +40,14 @@ public class MainActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	
+
 	private void initButtons() {
 		((Button) findViewById(R.id.btnValider)).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				String loginSaisi = ((EditText) findViewById(R.id.edtTxtLogin)).getText().toString();
 				String passwordSaisi = ((EditText) findViewById(R.id.edtTxtPassword)).getText().toString();
+
 				if(loginSaisi.isEmpty()) {
 					Toast.makeText(getApplicationContext(), "Veuillez saisir votre login !", Toast.LENGTH_SHORT).show();
 				} else if(passwordSaisi.isEmpty()) {
@@ -63,7 +62,7 @@ public class MainActivity extends Activity {
 				}
 			}
 		});
-		
+
 		((Button) findViewById(R.id.btnEffacer)).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -71,7 +70,7 @@ public class MainActivity extends Activity {
 				((EditText)findViewById(R.id.edtTxtPassword)).setText("");
 			}
 		});
-		
+
 		((Button) findViewById(R.id.btnRetour)).setOnClickListener(new RetourOnClickListener(this));
 	}
 }
